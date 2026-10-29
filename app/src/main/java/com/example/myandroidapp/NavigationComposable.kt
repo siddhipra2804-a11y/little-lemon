@@ -5,6 +5,7 @@ import androidx.compose.runtime.Composable
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
+import com.example.myandroidapp.Onboarding
 
 @Composable
 fun MyNavigation(navController: NavHostController, context: Context) {
@@ -20,7 +21,7 @@ fun MyNavigation(navController: NavHostController, context: Context) {
         startDestination = startDestination
     ) {
         composable(Onboarding.route) {
-        Onboarding(navController = navController)
+            Onboarding(navController = navController)
     }
         composable(Home.route) {
             HomeScreen()
@@ -29,4 +30,9 @@ fun MyNavigation(navController: NavHostController, context: Context) {
             ProfileScreen()
         }
     }
+}
+
+@Composable
+fun Onboarding(navController: NavHostController) {
+    TODO("Not yet implemented")
 }
